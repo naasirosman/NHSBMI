@@ -30,13 +30,15 @@
         <div class="heightandcm">
             <div class="height">Height</div>
             <div class="cm"> <a class="cmlink" href="">Switch to cm</a> </div>
+            
         </div>
+        <div class="heighterror" style="display: none;">This height is invalid!</div>
         <div class="feet-inches">
             <div class="feet">Feet
-                <input class="feetbox" type="number" onblur="getFeet()">
+                <input class="feetbox" type="number" >
             </div>
             <div class="inches">Inches
-                <input class="inchbox" type="number" onblur="getInches()">
+                <input class="inchbox" type="number" >
             </div>
         </div>
         <hr class="heighthr">
@@ -44,6 +46,7 @@
             <div class="weight">Weight</div>
             <div class="lbs"> <a class="lbslink" href="">Switch to lbs</a> </div>
         </div>
+        <div class="weighterror" style="display: none;">This weight is invalid!</div>
 
             <div class="kg">Kilograms
                 <input class="kgbox"type="number">
@@ -51,6 +54,8 @@
 
         <hr class="weighthr">
             <div class="age">Age</div>
+            <div class="ageerror" style="display: none;">This age is invalid!</div>
+            <div class="age-child-error" style="display: none;">This person is a not an adult</div>
                 <input class="agebox"type="number">
 
         <hr class="agehr">
@@ -159,7 +164,7 @@
         <hr class="activityhr">
 
         <div class="footer">
-            <button class="calculate">Calculate</button>
+            <button onclick="calculate()" class="calculate">Calculate</button>
             <span class="reset">Reset</span>
         </div>
 

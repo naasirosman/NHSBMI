@@ -400,5 +400,9 @@ body {
 .reset:hover {
   text-decoration: none;
 }
-
+.heighterror, .weighterror, .ageerror, .age-child-error  {
+  color: red;
+  text-align: left;
+  margin-left: 20px;
+}
 
