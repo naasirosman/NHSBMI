@@ -59,11 +59,11 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-.adult {
+/* .adult {
   height: 45px;
   width: 43%;
   color: white;
-  background-color: #215eb8;
+  background-color: #768692;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -76,8 +76,8 @@ body {
   font-size: 1.7rem;
   font-weight: lighter;
   padding-top: 2px;
-}
-.child {
+} */
+.tab {
   height: 45px;
   width: 43%;
   color: white;
@@ -95,7 +95,7 @@ body {
   font-weight: lighter;
   padding-top: 2px;
 }
-.adultWhenChildIsSelected {
+.unclickedAdult {
   height: 45px;
   width: 43%;
   color: white;
@@ -113,15 +113,36 @@ body {
   font-weight: lighter;
   padding-top: 2px;
 }
-.adultWhenChildIsSelected:hover {
+.unclickedAdult:hover {
   background-color: #fceb3c;
   color: black;
   text-decoration: underline;
 }
-.child:hover {
+.unchosen:hover {
   background-color: #fceb3c;
   color: black;
   text-decoration: underline;
+}
+.clickedChild {
+  height: 45px;
+  width: 43%;
+  color: white;
+  background-color: var(--blue);
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  padding-top: 2px;
+}
+.clickedChild:hover {
+  text-decoration: none;
 }
 
 
@@ -227,6 +248,10 @@ body {
 }
 .lbslink {
   color: #215eb8;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  text-decoration: underline;
 }
 .lbslink:hover {
   /* what is the color */
@@ -269,7 +294,9 @@ body {
   width: 120px;
   display: block;
   border-radius: 5px;
-  margin: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
 }
 
 .agehr {
@@ -447,6 +474,7 @@ body {
   color: red;
   text-align: left;
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 .lbs {
   color: #768692;
@@ -462,4 +490,34 @@ body {
   display: block;
   border-radius: 5px;
   margin-top: 10px;
+}
+.chosen {
+height: 45px;
+  width: 43%;
+  color: white;
+  background-color: #215eb8;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  padding-top: 2px;
+}
+.day, .month, .year {
+   height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+}
+.childAge {
+  text-align: left;
+  display: none;
 }

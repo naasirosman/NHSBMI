@@ -21,8 +21,8 @@
             If you have or think you might have an <a class="disorderlink" href="">eating disorder</a>, we advise you not to use the BMI Calculator and get further advice from your GP.
         </div>
         <div class="navbar">
-            <div class="adult">Adult</div>
-            <div class="child ">Child</div>
+            <div class="tab adult chosen">Adult</div>
+            <div class="tab child unchosen">Child</div>
 
         </div>
         <hr class="navhr">
@@ -46,7 +46,7 @@
         <hr class="heighthr">
         <div class="weightandlbs">
             <div class="weight">Weight</div>
-            <div class="lbs-link-div"> <a class="lbslink" href="">Switch to lbs</a> </div>
+            <div class="lbs-link-div"> <button class="lbslink" href="">Switch to lbs</button> </div>
         </div>
         <div class="weighterror" style="display: none;">This weight is invalid!</div>
 
@@ -61,6 +61,11 @@
             <div class="ageerror" style="display: none;">This age is invalid!</div>
             <div class="age-child-error" style="display: none;">This person is a not an adult</div>
                 <input class="agebox"type="number">
+            <div class="childAge">
+              <input type="number" name="" class="day" placeholder="Day">
+              <input type="number" name="" class="month" placeholder="Month">
+              <input type="number" class="year" placeholder="Year">
+            </div>
 
         <hr class="agehr">
 
@@ -91,7 +96,7 @@
             </details>
                 <div class="radios">
                   <div class="radios_item">
-                    <input id="bangladeshi" name="race" type="radio" value="0">
+                    <input id="bangladeshi" name="race" type="radio" value="0" > 
                     <label for="bangladeshi">Bangladeshi</label>
                   </div>
                   <div class="radios_item">
