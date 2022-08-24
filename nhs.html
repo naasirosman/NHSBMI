@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="nhs.css">
-    <script src="nhs.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -23,13 +22,13 @@
         </div>
         <div class="navbar">
             <div class="adult">Adult</div>
-            <div class="child">Child</div>
+            <div class="child hoverchild">Child</div>
 
         </div>
         <hr class="navhr">
         <div class="heightandcm">
             <div class="height">Height</div>
-            <div class="cm"> <a class="cmlink" href="">Switch to cm</a> </div>
+            <div class="cm"> <button class="cmlink" href="">Switch to cm</button> </div>
             
         </div>
         <div class="heighterror" style="display: none;">This height is invalid!</div>
@@ -41,17 +40,22 @@
                 <input class="inchbox" type="number" >
             </div>
         </div>
+        <div class="centimetres">Centimetres
+          <input class="cmBox" type="number" >
+      </div>
         <hr class="heighthr">
         <div class="weightandlbs">
             <div class="weight">Weight</div>
-            <div class="lbs"> <a class="lbslink" href="">Switch to lbs</a> </div>
+            <div class="lbs-link-div"> <a class="lbslink" href="">Switch to lbs</a> </div>
         </div>
         <div class="weighterror" style="display: none;">This weight is invalid!</div>
 
             <div class="kg">Kilograms
                 <input class="kgbox"type="number">
             </div>
-
+            <div class="lbs">lbs
+              <input class="lbsBox" type="number" >
+          </div>
         <hr class="weighthr">
             <div class="age">Age</div>
             <div class="ageerror" style="display: none;">This age is invalid!</div>
@@ -172,6 +176,6 @@
 
 
 
-    
+    <script src="nhs.js"></script>
 </body>
 </html>

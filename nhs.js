@@ -21,6 +21,8 @@
 // }
 
 
+
+
 function calculate() {
 
     var inches = parseInt(document.querySelector('.inchbox').value); 
@@ -61,16 +63,30 @@ function calculate() {
         document.querySelector('.age-child-error').style.display = "block";
         return;        
      }
-
-
-
-
-
-
-
-
-
 }
+const switchToCm = document.querySelector(".cmlink")
+switchToCm.addEventListener("click", function() {
+  document.querySelector(".centimetres").style.display = "block"
+  document.querySelector(".inches").style.display = "none"
+  document.querySelector(".feet").style.display = "none"});
+
+
+const switchToLbs = document.querySelector(".lbs-link-div")
+    switchToLbs.addEventListener("click", function() {
+      document.querySelector(".lbs").style.display = "block"
+      document.querySelector(".kg").style.display = "none"});
+
+
+
+      const switchToChild = document.querySelector(".child")
+      switchToChild.addEventListener("click", function() {
+        document.querySelector(".child").style.backgroundColor = "#215eb8"
+      //   document.querySelector(".child").style:hover. = "#215eb8"
+        document.querySelector(".adult").className = "adultWhenChildIsSelected"
+        document.querySelector(".adult").classList.remove = ("hoverchild")
+      //   document.querySelector(".adult").style.di = "none"
+   });
+
 // console.log(calculateBmi(12))
 
 //   function toCm() {

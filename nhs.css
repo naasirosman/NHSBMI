@@ -95,11 +95,35 @@ body {
   font-weight: lighter;
   padding-top: 2px;
 }
-.child:hover {
+.adultWhenChildIsSelected {
+  height: 45px;
+  width: 43%;
+  color: white;
+  background-color: #768692;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  padding-top: 2px;
+}
+.adultWhenChildIsSelected:hover {
   background-color: #fceb3c;
   color: black;
   text-decoration: underline;
 }
+.hoverchild:hover {
+  background-color: #fceb3c;
+  color: black;
+  text-decoration: underline;
+}
+
 
 .navhr {margin-left: 20px;
   margin-right: 20px;
@@ -125,6 +149,10 @@ body {
 }
 .cmlink {
   color: #215eb8;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  text-decoration: underline;
 }
 .cmlink:hover {
   /* what is the color */
@@ -141,6 +169,21 @@ body {
   text-align: left;
   margin-right: 20px;
 
+}
+.centimetres {
+  color: #768692;
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: none ;
+}
+.cmBox {
+  height: 30px;
+  width: 120px;
+  display: block;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 .inches {
   color: #768692;
@@ -405,4 +448,18 @@ body {
   text-align: left;
   margin-left: 20px;
 }
-
+.lbs {
+  color: #768692;
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: none ;
+}
+.lbsBox {
+  height: 30px;
+  width: 120px;
+  display: block;
+  border-radius: 5px;
+  margin-top: 10px;
+}
