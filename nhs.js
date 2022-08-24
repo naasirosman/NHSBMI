@@ -83,7 +83,7 @@ const switchToLbs = document.querySelector(".lbs-link-div")
         document.querySelector(".child").style.backgroundColor = "#215eb8"
       //   document.querySelector(".child").style:hover. = "#215eb8"
         document.querySelector(".adult").className = "adultWhenChildIsSelected"
-        document.querySelector(".adult").classList.remove = ("hoverchild")
+      //   document.querySelector(".adult").classList.remove = ("hoverchild")
       //   document.querySelector(".adult").style.di = "none"
    });
 

@@ -118,7 +118,7 @@ body {
   color: black;
   text-decoration: underline;
 }
-.hoverchild:hover {
+.child:hover {
   background-color: #fceb3c;
   color: black;
   text-decoration: underline;
