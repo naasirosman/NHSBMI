@@ -12,172 +12,214 @@
 
 <body>
     <div class="card">
-        <div class="card-title">
-
-            BMI Calculator
-        </div>
-
-        <div class="eating">
-            If you have or think you might have an <a class="disorderlink" href="">eating disorder</a>, we advise you not to use the BMI Calculator and get further advice from your GP.
-        </div>
-        <div class="navbar">
-            <div class="tab adult chosen">Adult</div>
-            <div class="tab child unchosen">Child</div>
-
-        </div>
-        <hr class="navhr">
-        <div class="heightandcm">
-            <div class="height">Height</div>
-            <div class="cm"> <button class="cmlink" href="">Switch to cm</button> </div>
-            
-        </div>
-        <div class="heighterror" style="display: none;">This height is invalid!</div>
-        <div class="feet-inches">
-            <div class="feet">Feet
-                <input class="feetbox" type="number" >
-            </div>
-            <div class="inches">Inches
-                <input class="inchbox" type="number" >
-            </div>
-        </div>
-        <div class="centimetres">Centimetres
-          <input class="cmBox" type="number" >
+      <div class="cardTitle">
+        BMI Calculator
       </div>
-        <hr class="heighthr">
+     <div class="calculatePage" style="display: block;">
+        <div class="eating">
+          If you have or think you might have an <a class="disorderLink" href="">eating disorder</a>, we advise you not to use the BMI Calculator and get further advice from your GP.
+        </div>
+        <div class="tabBar">
+          <div class="tab adult chosen">
+            Adult
+          </div>
+          <div class="tab child unchosen">
+            Child
+          </div>
+        </div>
+<hr class="navhr">
+        <div class="heightSection">
+          <div class="heightTitle">
+            Height
+          </div>
+          <div class="cmToggle">
+             <button class="cmToggleLink" href="">Switch to cm</button> 
+          </div>
+        </div>
+        <div class="heighterror" style="display: none;">
+          This height is invalid!
+        </div>
+          <div class="feet-inches">
+              <div class="feet">Feet
+                  <input class="feetbox" type="number" >
+              </div>
+              <div class="inches">Inches
+                  <input class="inchbox" type="number" >
+              </div>
+              <div class="centimetres">Centimetres
+                <input class="cmBox" type="number" >
+              </div>
+          </div>
+
+<hr class="heighthr">
         <div class="weightandlbs">
-            <div class="weight">Weight</div>
-            <div class="lbs-link-div"> <button class="lbslink" href="">Switch to lbs</button> </div>
+          <div class="weight">
+            Weight
+          </div>
+          <div class="lbs-link-div"> 
+            <button class="lbslink" href="">Switch to lbs</button> 
+          </div>
         </div>
         <div class="weighterror" style="display: none;">This weight is invalid!</div>
-
-            <div class="kg">Kilograms
-                <input class="kgbox"type="number">
-            </div>
+        <div>
+          <div class="kg">Kilograms
+              <input class="kgbox"type="number">
+          </div>
             <div class="lbs">lbs
               <input class="lbsBox" type="number" >
-          </div>
-        <hr class="weighthr">
-            <div class="age">Age</div>
-            <div class="ageerror" style="display: none;">This age is invalid!</div>
-            <div class="age-child-error" style="display: none;">This person is a not an adult</div>
-                <input class="agebox"type="number">
-            <div class="childAge">
-              <input type="number" name="date" class="day" placeholder="Day" >
-              <input type="number" name="date" class="month" placeholder="Month">
-              <input type="number" name="date" class="year" placeholder="Year">
             </div>
-
-        <hr class="agehr">
-
-        <div class="sexsection">
-            <div class="sextitle">Sex </div>
-            <details class="sexdetail"> 
-              <summary> <span class="sex-details-summary-text">Why are we asking?</span> </summary>
-                <div class="details-text">For children, BMI centile is sex specific. For both children and adults, we give more personalised information based on whether you are male or female.</div>
-            </details>
-                <div class="radios">
-                  <div class="radios_item">
-                    <input id="maleradio" name="gender" type="radio" value="1">
-                    <label for="maleradio">Male</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="femaleradio" name="gender" type="radio" value="0">
-                    <label for="femaleradio">Female</label>
-                  </div>
-                </div>
-            </div>
-        <hr class="sexhr">
-
-        <div class="racesection">
-            <div class="racetitle">Ethnic group (optional) </div>
-            <details class="racedetail"> 
-              <summary> <span class="race-details-summary-text">Why are we asking?</span> </summary>
-                <div class="details-text">Black, Asian and other minority ethnic groups with a BMI of 23 or more have a higher risk of getting type 2 diabetes and other long term illnesses</div>
-            </details>
-                <div class="radios">
-                  <div class="radios_item">
-                    <input id="bangladeshi" name="race" type="radio" value="0" required > 
-                    <label for="bangladeshi">Bangladeshi</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="blackafrican" name="race" type="radio" value="1">
-                    <label for="blackafrican">Black African</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="blackcarribean" name="race" type="radio" value="0">
-                    <label for="blackcarribean">Black Carribean</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="chinese" name="race" type="radio" value="1">
-                    <label for="chinese">Chinese</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="indian" name="race" type="radio" value="0">
-                    <label for="indian">Indian</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="middleeastern" name="race" type="radio" value="1">
-                    <label for="middleeastern">Middle Eastern</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="mixed" name="race" type="radio" value="0">
-                    <label for="mixed">Mixed</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="pakistani" name="race" type="radio" value="1">
-                    <label for="pakistani">Pakistani</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="white" name="race" type="radio" value="0">
-                    <label for="white">White</label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="other" name="race" type="radio" value="1">
-                    <label for="other">Other</label>
-                  </div>
-                </div>
-            </div>
-        <hr class="racehr">
-
-        <div class="activitysection">
-            <div class="activitytitle">Activity level </div>
-            <details class="activitydetail"> 
-              <summary> <span class="activity-details-summary-text">What counts?</span> </summary>
-                <div class="details-text">Physical activity is anything that makes you breathe faster and feel warmer. It could be: <br><br>
-
-                  • brisk walking <br>
-                  • running <br>
-                  • cycling <br>
-                  • swimming<br>
-                  • dancing<br>
-                  • an active job<br>
-                  • pushing a lawnmower<br>
-                  • tennis<br>
-                  • football</div>
-            </details>
-                <div class="radios">
-                  <div class="radios-item">
-                    <input id="inactive" name="gender" type="radio" value="1">
-                    <label for="inactive"> Inactive - <span style="color: gray;">Less than 30 minutes a week</span> </label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="moderate" name="gender" type="radio" value="0">
-                    <label for="moderate">Moderate - <span style="color: gray;">Between 30 and 60 minutes a week</span></label>
-                  </div>
-                  <div class="radios_item">
-                    <input id="active" name="gender" type="radio" value="0">
-                    <label for="active">Active - <span style="color: gray;">Between 60 and 150 minutes a week</span></label>
-                  </div>
-                </div>
-            </div>
-        <hr class="activityhr">
-
-        <div class="footer">
-            <button onclick="calculate()" class="calculate">Calculate</button>
-            <span class="reset">Reset</span>
         </div>
+<hr class="weighthr">
+          <div class="age">
+            Age
+          </div>
+          <div class="ageerror" style="display: none;">
+            This age is invalid!
+          </div>
+          <div class="age-child-error" style="display: none;">
+            This person is a not an adult
+          </div>
+          <input class="agebox"type="number">
+          <div class="childAge">
+            <input type="number" name="date" class="day" placeholder="Day" >
+            <input type="number" name="date" class="month" placeholder="Month">
+            <input type="number" name="date" class="year" placeholder="Year">
+          </div>
+
+<hr class="agehr">
+
+          <div class="sexsection">
+              <div class="sextitle">Sex </div>
+              <details class="sexdetail"> 
+                <summary> <span class="sex-details-summary-text">Why are we asking?</span> </summary>
+                  <div class="details-text">For children, BMI centile is sex specific. For both children and adults, we give more personalised information based on whether you are male or female.</div>
+              </details>
+                  <div class="radios">
+                    <div class="radios_item">
+                      <input id="maleradio" name="gender" type="radio" value="1">
+                      <label for="maleradio">Male</label>
+                    </div>
+                    <div class="radios_item">
+                      <input id="femaleradio" name="gender" type="radio" value="0">
+                      <label for="femaleradio">Female</label>
+                    </div>
+                  </div>
+              </div>
+<hr class="sexhr">
+
+          <div class="racesection">
+            <div class="racetitle">
+              Ethnic group (optional) 
+            </div>
+            <details class="racedetail"> 
+              <summary> 
+                <span class="race-details-summary-text">Why are we asking?</span> 
+              </summary>
+            <div class="details-text">Black, Asian and other minority ethnic groups with a BMI of 23 or more have a higher risk of getting type 2 diabetes and other long term illnesses
+            </div>
+            </details>
+            <div class="radios">
+              <div class="radios_item">
+                <input id="bangladeshi" name="race" type="radio" value="0" required > 
+                  <label for="bangladeshi">Bangladeshi</label>
+              </div>
+              <div class="radios_item">
+                <input id="blackafrican" name="race" type="radio" value="1">
+                <label for="blackafrican">Black African</label>
+             </div>
+              <div class="radios_item">
+                <input id="blackcarribean" name="race" type="radio" value="0">
+                <label for="blackcaribbean">Black Caribbean</label>
+              </div>
+              <div class="radios_item">
+                <input id="chinese" name="race" type="radio" value="1">
+                <label for="chinese">Chinese</label>
+              </div>
+              <div class="radios_item">
+                <input id="indian" name="race" type="radio" value="0">
+                <label for="indian">Indian</label>
+              </div>
+              <div class="radios_item">
+                <input id="middleeastern" name="race" type="radio" value="1">
+                <label for="middleeastern">Middle Eastern</label>
+              </div>
+                    <div class="radios_item">
+                      <input id="mixed" name="race" type="radio" value="0">
+                      <label for="mixed">Mixed</label>
+                    </div>
+                    <div class="radios_item">
+                      <input id="pakistani" name="race" type="radio" value="1">
+                      <label for="pakistani">Pakistani</label>
+                    </div>
+                    <div class="radios_item">
+                      <input id="white" name="race" type="radio" value="0">
+                      <label for="white">White</label>
+                    </div>
+                    <div class="radios_item">
+                      <input id="other" name="race" type="radio" value="1">
+                      <label for="other">Other</label>
+                    </div>
+                  </div>
+              </div>
+<hr class="racehr">
+
+          <div class="activitysection">
+              <div class="activitytitle">Activity level </div>
+              <details class="activitydetail"> 
+                <summary> <span class="activity-details-summary-text">What counts?</span> </summary>
+                  <div class="details-text">Physical activity is anything that makes you breathe faster and feel warmer. It could be: <br><br>
+
+                    • brisk walking <br>
+                    • running <br>
+                    • cycling <br>
+                    • swimming<br>
+                    • dancing<br>
+                    • an active job<br>
+                    • pushing a lawnmower<br>
+                    • tennis<br>
+                    • football</div>
+              </details>
+                  <div class="radios">
+                    <div class="radios-item">
+                      <input id="inactive" name="gender" type="radio" value="1">
+                      <label for="inactive"> Inactive - <span style="color: gray;">Less than 30 minutes a week</span> </label>
+                    </div>
+                    <div class="radios_item">
+                      <input id="moderate" name="gender" type="radio" value="0">
+                      <label for="moderate">Moderate - <span style="color: gray;">Between 30 and 60 minutes a week</span></label>
+                    </div>
+                    <div class="radios_item">
+                      <input id="active" name="gender" type="radio" value="0">
+                      <label for="active">Active - <span style="color: gray;">Between 60 and 150 minutes a week</span></label>
+                    </div>
+                  </div>
+              </div>
+          <hr class="activityhr">
+
+          <div class="footer">
+              <button onclick="calculate()" class="calculate">Calculate</button>
+              <span class="reset">Reset</span>
+          </div>
+    </div>
+
+  <div class="resultPage" style="display: none;">
+    <div class="goBack" onclick="goBack()">
+      Go back
+    </div>
+    <div class="resultNumber">
+      00.0
+    </div>
+    <div class="resultDescription">
+      Your result suggests you are <span class="weightClass">a healthy weight</span>
+    </div>
+    <div class="riskDescription" >
+     <span class="riskRace" style="display: none;">Your ethnicity increases the risk of health issues with a BMI of 23 or more.</span>  <br> 
+     <div class="suggest"> We suggest you <span class="weightSuggestion">maintain your weight.</span> </div>
+    </div>
 
     </div>
+    
+  </div>
 
 
 

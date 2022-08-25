@@ -23,7 +23,7 @@ body {
     background-color: white;
     margin-bottom: 20px;
   }
-.card-title {
+.cardTitle {
   height: 60px;
   width: 490;
   border-bottom: 2px solid var(--blue);
@@ -49,13 +49,13 @@ body {
 
 
 }
-.disorderlink {
+.disorderLink {
   color: #215eb8;
 }
 .disorderlink:hover {
   text-decoration: none;
 }
-.navbar {
+.tabBar {
   display: flex;
   justify-content: space-evenly;
 }
@@ -154,28 +154,28 @@ body {
   border: 0;
 }
 
-.heightandcm {
+.heightSection {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
-.height {
+.heightTitle {
   font-weight: bold;
   font-size: 1.3rem;
 }
-.cm {
+.cmToggle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cmlink {
+.cmToggleLink {
   color: #215eb8;
   border: none;
   background-color: white;
   font-size: 1rem;
   text-decoration: underline;
 }
-.cmlink:hover {
+.cmToggleLink:hover {
   /* what is the color */
   text-decoration: none;
 }
@@ -191,12 +191,16 @@ body {
   margin-right: 20px;
 
 }
+.centimetresWrapper {
+  display: flex;
+  justify-content: left;
+  padding: 20px;
+}
+
 .centimetres {
   color: #768692;
   text-align: left;
   margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
   display: none ;
 }
 .cmBox {
@@ -242,9 +246,10 @@ body {
   font-size: 1.3rem;
 }
 .lbs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #768692;
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .lbslink {
   color: #215eb8;
@@ -261,7 +266,8 @@ body {
   color: #768692;
   text-align: left;
   margin-right: 20px;
-  padding: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 
 }
 .kgbox {
@@ -340,7 +346,6 @@ body {
   color: black;
   
 }
-
 .details-text {
   color: black;
   margin-left: 20px;
@@ -437,11 +442,11 @@ body {
   border: 5px;
 
 }
-.radiositem {
+/* .radios_item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
+} */
 .footer {
   height: 70px;
   display: flex;
@@ -520,4 +525,44 @@ height: 45px;
 .childAge {
   text-align: left;
   display: none;
+}
+.goBack {
+  padding: 20px;
+  color: #215eb8;
+  text-decoration: underline;
+  text-align: left;
+}
+.goBack:hover {
+  text-decoration: none;
+}
+.resultNumber {
+  font-size: 4rem;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.resultDescription {
+  text-align: left;
+  padding-left: 20px;
+}
+.weightClass {
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.healthyRange {
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 20px;
+  color: #A6B0B8;
+}
+.riskDescription {
+  background-color: #D9DDE0;
+  padding: 20px;
+  margin: 20px;
+}
+.suggest {
+  margin-top: 10px;
+}
+.weightSuggestion {
+  font-weight: bold;
 }

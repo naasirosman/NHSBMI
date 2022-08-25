@@ -1,29 +1,7 @@
 
 
-
-// function getFeet(event) {
-//     const value = event.target.value;
-//     const feet = document.querySelector('.feetbox').value;
-//     return feet;
-//   }
-
-//  function getInches() {
-//     var inches = document.querySelector('.inchbox').value;
-//     return inches;
-// }
-
-// const calculate = BMI() {
-//     var inches = document.querySelector('.inchbox').value;
-//     const feet = document.querySelector('.feetbox').value;
-//     return inches
-//     console.log(feet);
-//     console.log(inches)
-// }
-
 let heightUnit = "feet";
 let weightUnit = "kg"
-console.log(heightUnit)
-console.log(weightUnit)
 
 
 function calculate() {
@@ -38,26 +16,28 @@ function calculate() {
     var day = parseInt(document.querySelector('.day').value)
     var month = parseInt(document.querySelector('.month').value)
     var year = parseInt(document.querySelector('.year').value)
+    const calculatePage = document.querySelector('.calculatePage')
+    const resultPage = document.querySelector('.resultPage')
+    calculatePage.style.display = "none"
+    resultPage.style.display = "block"
 
+    
     let result
 
     if (heightUnit === "feet" && weightUnit === "kg") {
-      console.log(`height = ft, in =  ${feet} ' ${inches}... weight = kg = ${kg}`  )
+
       result = kg / (((((feet * 12) + inches) * 2.54) / 100) ** 2)
-      console.log(result)
+      console.log(`height = ${feet} feet and ${inches} inches and weight = ${kg}kg therefore BMI = ${result}` )
     } else if (heightUnit === "cm" && weightUnit === "kg") {
-      console.log(`height = cm =  ${cm}... weight = kg = ${kg}`  )
         result = kg / ((cm / 100) ** 2)
-        console.log(result)
+        console.log(`height = ${cm} cm and weight = ${kg}kg therefore BMI = ${result}` )
     }
     else if (heightUnit === "feet" && weightUnit === "lbs") {
-      console.log(`height = ft, in =  ${feet} ' ${inches}... weight = lbs = ${lbs}`  )
       result = ( lbs * 0.45 ) / (((((feet * 12) + inches) * 2.54) / 100) ** 2)
-      console.log(result)
+      console.log(`height = ${feet} feet and ${inches} inches and weight = ${lbs}lbs therefore BMI = ${result}` )
     } else {
-      console.log(`height = cm =  ${cm}... weight = lbs = ${lbs}`  )
       result = ( lbs * 0.45 ) / ((cm / 100) ** 2)
-      console.log(result)
+      console.log(`height = ${cm} cm, weight = ${lbs}lbs therefore BMI = ${result}` )
     };
 
     if (feet >= 8 || feet <= 3) { 
@@ -65,12 +45,16 @@ function calculate() {
         console.log(heightError);
         document.querySelector('.heighterror').style.display = "block";
         return; //makes sure that the inch height error is not displayed  
+     } else {
+      document.querySelector('.heighterror').style.display = "none";
      }
      if (inches >= 12 || inches < 0) { 
         const heightError = "This height is invalid!"
         console.log(heightError);
         document.querySelector('.heighterror').style.display = "block";
         return;        
+     } else {
+      document.querySelector('.heighterror').style.display = "none";
      }
      if (kg >= 201 || kg <= 20) { 
 
@@ -78,61 +62,134 @@ function calculate() {
         console.log(heightError);
         document.querySelector('.weighterror').style.display = "block";
         return;        
+     } else {
+      document.querySelector('.weighterror').style.display = "none";
      }
      if (age >= 100) { 
         const heightError = "This age is invalid!"
         console.log(heightError);
         document.querySelector('.ageerror').style.display = "block";
         return;        
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
      }
      if (age <= 18) { 
         const ageError = "This age is invalid!"
         console.log(ageError);
         document.querySelector('.age-child-error').style.display = "block";
         return;        
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
      }
      if (day <= 0 || day >= 32) {
-      const heightError = "This age is invalid!"
-      console.log(heightError);
+      const ageError = "This age is invalid!"
+      console.log(ageError);
       document.querySelector('.age-child-error').style.display = "block";
       document.querySelector('.age-child-error').innerHTML = "Enter a valid date";
       return;  
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
      }
      if (month <= 0 || day >= 32) {
-      const heightError = "This age is invalid!"
-      console.log(heightError);
+      const ageError = "This age is invalid!"
+      console.log(ageError);
       document.querySelector('.age-child-error').style.display = "block";
       document.querySelector('.age-child-error').innerHTML = "Enter a valid date";
       return;  
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
      }
      if (year <= 2004) {
-      const heightError = "This age is invalid!"
-      console.log(heightError);
+      const ageError = "This age is invalid!"
+      console.log(ageError);
       document.querySelector('.age-child-error').style.display = "block";
       document.querySelector('.age-child-error').innerHTML = "This person is not a child";
       return;  
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
      }
      if (year > 2020) {
-      const heightError = "This age is invalid!"
-      console.log(heightError);
+      const ageError = "This age is invalid!"
+      console.log(ageError);
       document.querySelector('.age-child-error').style.display = "block";
       document.querySelector('.age-child-error').innerHTML = "This person is too young for BMI to be measured";
       return;  
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
      }
+     if (( month === 2 || month === 4 || month === 6 || month === 9 || month === 11 ) && day === 31 || day === 30){
+      const ageError = "This age is invalid!"
+      console.log(ageError);
+      document.querySelector('.age-child-error').style.display = "block";
+      document.querySelector('.age-child-error').innerHTML = "Enter a valid date";
+      console.log(ageError);
+      return
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
+     }
+     if ( month === 2 && day === 29 ){
+      const ageError = "This age is invalid!"
+      console.log(ageError);
+      document.querySelector('.age-child-error').style.display = "block";
+      document.querySelector('.age-child-error').innerHTML = "Enter a valid date";
+      console.log(ageError);
+      return
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
+     }
+     readyResult = (Math.round(result * 10) / 10)
+     console.log(readyResult)
+     document.querySelector('.resultNumber').innerHTML = readyResult
+
+     if (readyResult < 18.5) {
+      document.querySelector('.weightClass').innerHTML = "underweight";
+      document.querySelector('.weightSuggestion').innerHTML = "gain weight";
+      console.log("underweight")
+     }
+     if (readyResult > 18.5 && readyResult <= 24.9) {
+      document.querySelector('.weightClass').innerHTML = "a healthy weight";
+      document.querySelector('.weightSuggestion').innerHTML = "maintain your weight";
+      console.log("healthy weight")
+     }
+     if (readyResult > 24.9 && readyResult <= 29.9) {
+      document.querySelector('.weightClass').innerHTML = "overweight";
+      document.querySelector('.weightSuggestion').innerHTML = "lose weight";
+      console.log("overweight")
+     }
+     if (readyResult > 29.9 && readyResult <= 34.9) {
+      document.querySelector('.weightClass').innerHTML = "obese";
+      document.querySelector('.weightSuggestion').innerHTML = "lose weight";
+      console.log("obese")
+     }
+     if (readyResult > 34.9 && readyResult <= 39.9) {
+      document.querySelector('.weightClass').innerHTML = "severely obese";
+      document.querySelector('.weightSuggestion').innerHTML = "lose weight";
+      console.log("severely obese")
+     }
+     if (readyResult > 39.9) {
+      document.querySelector('.weightClass').innerHTML = "morbidly obese";
+      document.querySelector('.weightSuggestion').innerHTML = "lose weight";
+      console.log("morbidly obese")
+     }
+     if(document.querySelector('.bangladeshi').checked || document.querySelector('.blackafrican').checked || document.querySelector('.blackcaribbean').checked || document.querySelector('.indian').checked) {
+      document.querySelector('.riskRace').style.display = "block"
+    }
 }
-const feetAndCmToggle = document.querySelector(".cmlink")
+
+
+const feetAndCmToggle = document.querySelector(".cmToggleLink")
 feetAndCmToggle.addEventListener("click", function() {
    if (heightUnit === "feet") {
   document.querySelector(".centimetres").style.display = "block"
   document.querySelector(".inches").style.display = "none"
   document.querySelector(".feet").style.display = "none"
-  document.querySelector(".cmlink").innerHTML = "Switch to ft, in"
+  document.querySelector(".cmToggleLink").innerHTML = "Switch to ft, in"
    heightUnit = "cm"   
    } else if (heightUnit === "cm") {   
    document.querySelector(".centimetres").style.display = "none"
    document.querySelector(".inches").style.display = "block"
    document.querySelector(".feet").style.display = "block"
-   document.querySelector(".cmlink").innerHTML = "Switch to cm"
+   document.querySelector(".cmToggleLink").innerHTML = "Switch to cm"
     heightUnit = "feet"}
     else {
       document.querySelector(".centimetres").style.display = "none"
@@ -184,15 +241,9 @@ kgAndLbsToggle.addEventListener("click", function() {
      ageGroup = "adult"
 });
 
-
-
-// console.log(calculateBmi(12))
-
-//   function toCm() {
-//     const inchesToCm = getInches();
-//     const feetToCm = getFeet();
-//     return ((feetToCm * 12) + inchesToCm) * 2.54
-// }
-
-// var height = toCm()
-// console.log(height)
+function goBack() {
+   const calculatePage = document.querySelector('.calculatePage')
+   const resultPage = document.querySelector('.resultPage')
+   calculatePage.style.display = "block"
+   resultPage.style.display = "none"
+}
