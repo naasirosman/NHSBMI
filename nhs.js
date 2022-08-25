@@ -98,7 +98,7 @@ function calculate() {
       document.querySelector('.age-child-error').innerHTML = "Enter a valid date";
       return;  
      }
-     if (month <= 0 || day >= 13) {
+     if (month <= 0 || day >= 32) {
       const heightError = "This age is invalid!"
       console.log(heightError);
       document.querySelector('.age-child-error').style.display = "block";
@@ -147,12 +147,13 @@ kgAndLbsToggle.addEventListener("click", function() {
    if (weightUnit === "kg") {
   document.querySelector(".lbs").style.display = "block"
   document.querySelector(".kg").style.display = "none"
-  document.querySelector(".lbslink").innerHTML = "Switch to kg" 
+  document.querySelector(".lbslink").innerHTML = "Switch to lbs" 
    weightUnit = "lbs"}
   else if (weightUnit === "lbs") {
-   document.querySelector(".lbs").style.display = "block"
-   document.querySelector(".kg").style.display = "none"
-   document.querySelector(".lbslink").innerHTML = "Switch to lbs" }
+   document.querySelector(".lbs").style.display = "none"
+   document.querySelector(".kg").style.display = "block"
+   document.querySelector(".lbslink").innerHTML = "Switch to kg" 
+   weightUnit = "kg"}
    else {
       document.querySelector(".lbs").style.display = "none"
       document.querySelector(".kg").style.display = "none" 
