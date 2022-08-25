@@ -10,3 +10,4 @@ Improvements to be made:
 - date input accepts invalid dates on months with less than 31 days e.g. April 31st, June 31st, February 30th
 - age is not used in the BMI calculation
 - all fields are not mandatory
+- there needs to be a result page that uses "result" variable and displays to the user
