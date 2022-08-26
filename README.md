@@ -8,7 +8,6 @@ How the BMI calculator works (JavaScript):
 Improvements to be made:
 <<<<<<< HEAD
 - regardless if there is a problem of user input, it will go to the result page
-- does not accept 29th february as a date
 - all fields are not madatory
 - doesn't show ".riskRace" when Bangladeshi, Indian, Black African or Black Caribbean is selected
 
