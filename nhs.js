@@ -2,6 +2,9 @@
 
 let heightUnit = "feet";
 let weightUnit = "kg"
+let genderUnit =  "undefined"
+let raceUnit = "undefined"
+let activityUnit = "undefined"
 
 
 function calculate() {
@@ -20,14 +23,55 @@ function calculate() {
     const resultPage = document.querySelector('.resultPage')
     calculatePage.style.display = "none"
     resultPage.style.display = "block"
+      
+    if(document.getElementById('maleradio').checked) {
+      genderUnit = "male"
+    }else if(document.getElementById('femaleradio').checked) {
+      genderUnit = "female"
+    } else {
+      return
+    }
 
+    if(document.getElementById('bangladeshi').checked) {
+      raceUnit = "bangladeshi"
+    }else if(document.getElementById('blackafrican').checked) {
+      raceUnit = "blackafrican"
+   }else if(document.getElementById('blackcaribbean').checked) {
+      raceUnit = "blackcaribbean"
+   }else if(document.getElementById('chinese').checked) {
+      raceUnit = "chinese"
+   }else if(document.getElementById('white').checked) {
+      raceUnit = "white"
+   }else if(document.getElementById('other').checked) {
+      raceUnit = "other"
+   }else if(document.getElementById('indian').checked) {
+      raceUnit = "indian"
+   }else if(document.getElementById('middleeastern').checked) {
+      raceUnit = "middleeastern"
+   }else if(document.getElementById('mixed').checked) {
+      raceUnit = "mixed"
+   }else if(document.getElementById('pakistani').checked) {
+      raceUnit = "pakistani"
+    } else  {
+      return
+    }
+
+    if(document.getElementById('inactive').checked) {
+      activityUnit = "inactive"
+    }else if(document.getElementById('moderate').checked) {
+      activityUnit = "moderate"
+    } else if(document.getElementById('active').checked) {
+      activityUnit = "active" 
+    }  else {
+      return
+    }
     
     let result
 
     if (heightUnit === "feet" && weightUnit === "kg") {
 
       result = kg / (((((feet * 12) + inches) * 2.54) / 100) ** 2)
-      console.log(`height = ${feet} feet and ${inches} inches and weight = ${kg}kg therefore BMI = ${result}` )
+      console.log(`gender=${genderUnit} height=${feet}ft${inches}inches weight=${kg}kg race=${raceUnit} activity=${activityUnit} BMI=${result}` )
     } else if (heightUnit === "cm" && weightUnit === "kg") {
         result = kg / ((cm / 100) ** 2)
         console.log(`height = ${cm} cm and weight = ${kg}kg therefore BMI = ${result}` )
@@ -157,6 +201,17 @@ function calculate() {
      } else {
       document.querySelector('.age-child-error').style.display = "none";
      }
+     if (genderUnit === "undefined") { 
+      console.log(genderUnit)
+      const genderError = "Please select a gender"
+      console.log(genderError);
+      document.querySelector('.genderError').style.display = "block";
+      return;
+   } else {
+      document.querySelector('.genderError').style.display = "none";
+    console.log(genderUnit)
+
+   }
 
      readyResult = (Math.round(result * 10) / 10)
      console.log(readyResult)
@@ -192,9 +247,12 @@ function calculate() {
       document.querySelector('.weightSuggestion').innerHTML = "lose weight";
       console.log("morbidly obese")
      }
-     if(document.querySelector('.bangladeshi').checked || document.querySelector('.blackafrican').checked || document.querySelector('.blackcaribbean').checked || document.querySelector('.indian').checked) {
+     if(document.getElementById('bangladeshi').checked || document.getElementById('blackafrican').checked || document.getElementById('blackcaribbean').checked || document.getElementById('indian').checked) {
       document.querySelector('.riskRace').style.display = "block"
+    } else {
+      return
     }
+
 }
 
 

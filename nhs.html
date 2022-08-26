@@ -95,16 +95,16 @@
                   <div class="details-text">For children, BMI centile is sex specific. For both children and adults, we give more personalised information based on whether you are male or female.</div>
               </details>
                   <div class="radios">
-                    <div class="radios_item">
-                      <input id="maleradio" name="gender" type="radio" value="1">
-                      <label for="maleradio">Male</label>
-                    </div>
-                    <div class="radios_item">
-                      <input id="femaleradio" name="gender" type="radio" value="0">
+                      <span class="genderError" style="display: none;">Please select a gender</span>
+                      <input id="maleradio" name="gender" type="radio" value="male">
+                      <label for="maleradio">Male</label> <br>
+
+                      <input id="femaleradio" name="gender" type="radio" value="female">
                       <label for="femaleradio">Female</label>
+
                     </div>
                   </div>
-              </div>
+
 <hr class="sexhr">
 
           <div class="racesection">
@@ -173,21 +173,19 @@
                     • tennis<br>
                     • football</div>
               </details>
-                  <div class="radios">
-                    <div class="radios-item">
+
                       <input id="inactive" name="gender" type="radio" value="1">
                       <label for="inactive"> Inactive - <span style="color: gray;">Less than 30 minutes a week</span> </label>
-                    </div>
-                    <div class="radios_item">
+                      <br>
+
                       <input id="moderate" name="gender" type="radio" value="0">
                       <label for="moderate">Moderate - <span style="color: gray;">Between 30 and 60 minutes a week</span></label>
-                    </div>
-                    <div class="radios_item">
+                        <br>
                       <input id="active" name="gender" type="radio" value="0">
                       <label for="active">Active - <span style="color: gray;">Between 60 and 150 minutes a week</span></label>
-                    </div>
+
                   </div>
-              </div>
+
           <hr class="activityhr">
 
           <div class="footer">
@@ -195,6 +193,7 @@
               <span class="reset">Reset</span>
           </div>
     </div>
+
 
   <div class="resultPage" style="display: none;">
     <div class="goBack" onclick="goBack()">
@@ -212,7 +211,7 @@
     </div>
 
     </div>
-    
+  </div>
   </div>
 
 
