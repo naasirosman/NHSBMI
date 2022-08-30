@@ -51,7 +51,6 @@ body {
 }
 .disorderLink {
   color: #215eb8;
-  text-decoration: underline;
 }
 .disorderlink:hover {
   text-decoration: none;

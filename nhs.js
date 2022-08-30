@@ -100,36 +100,15 @@ function calculate() {
      } else {
       document.querySelector('.heighterror').style.display = "none";
      }
-
-     if (cm >= 210 || cm < 100) { 
-      const heightError = "This height is invalid!"
-      console.log(heightError);
-      document.querySelector('.heighterror').style.display = "block";
-      return;        
-   } else {
-    document.querySelector('.heighterror').style.display = "none";
-   }
-
      if (kg >= 201 || kg <= 20) { 
 
-        const weighterror = "This weight is invalid!"
-        console.log(weighterror);
+        const heightError = "This weight is invalid!"
+        console.log(heightError);
         document.querySelector('.weighterror').style.display = "block";
         return;        
      } else {
       document.querySelector('.weighterror').style.display = "none";
      }
-
-     if (lbs >= 500 || kg <= 40) { 
-
-      const weighterror = "This weight is invalid!"
-      console.log(weighterror);
-      document.querySelector('.weighterror').style.display = "block";
-      return;        
-     } else {
-       document.querySelector('.weighterror').style.display = "none";
-       }
-      
      if (age >= 100) { 
         const heightError = "This age is invalid!"
         console.log(heightError);
@@ -182,15 +161,6 @@ function calculate() {
      } else {
       document.querySelector('.age-child-error').style.display = "none";
      }
-     if ((year === 2005 || year === 2006 || year === 2007 || year === 2009 || year === 2010 || year === 2011 || year === 2013 || year === 2014 || year === 2015 || year === 2017|| year === 2018 || year === 2019) && month === 2 && day === 29 ) {
-      const ageError = "This age is invalid!"
-      console.log(ageError);
-      document.querySelector('.age-child-error').style.display = "block";
-      document.querySelector('.age-child-error').innerHTML = "Enter a valid date";
-      return;  
-     } else {
-      document.querySelector('.age-child-error').style.display = "none";
-     }
      if (( month === 2 || month === 4 || month === 6 || month === 9 || month === 11 ) && day === 31 || day === 30){
       const ageError = "This age is invalid!"
       console.log(ageError);
@@ -201,6 +171,17 @@ function calculate() {
      } else {
       document.querySelector('.age-child-error').style.display = "none";
      }
+     if ( month === 2 && day === 29 ){
+      const ageError = "This age is invalid!"
+      console.log(ageError);
+      document.querySelector('.age-child-error').style.display = "block";
+      document.querySelector('.age-child-error').innerHTML = "Enter a valid date";
+      console.log(ageError);
+      return
+     } else {
+      document.querySelector('.age-child-error').style.display = "none";
+     }
+<<<<<<< HEAD
      if (genderUnit === "undefined") { 
       console.log(genderUnit)
       const genderError = "Please select a gender"
@@ -213,6 +194,8 @@ function calculate() {
 
    }
 
+=======
+>>>>>>> parent of 0974ef0... feb 29 working
      readyResult = (Math.round(result * 10) / 10)
      console.log(readyResult)
      document.querySelector('.resultNumber').innerHTML = readyResult
@@ -326,6 +309,3 @@ function goBack() {
    calculatePage.style.display = "block"
    resultPage.style.display = "none"
 }
-
-
-
